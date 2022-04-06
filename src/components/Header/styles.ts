@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
 
   .app-title {
     display: flex;
