@@ -6,8 +6,10 @@ function App() {
   return ( 
     <Container>
       <Header />
-        <section className="container">
-          
+        <section className="content">
+          <div className="search-container">
+            
+          </div>
         </section>
       <Footer />
     </Container>

@@ -7,6 +7,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
   }
 
   body { 

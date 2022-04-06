@@ -7,4 +7,22 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+
+  .app-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    width: 60px;
+    margin: 10px;
+  }
+  .title {
+    font-size: 30px;
+    margin: 10px;
+  }
 `;
