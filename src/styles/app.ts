@@ -10,7 +10,10 @@ export const Container = styled.div`
   .content {
     margin-top: 12vh;
     width: 90%;
-    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .search-container {
     width: 100%;
@@ -64,7 +67,13 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  .poster-details-container {
-    width: 30%;
+  .review-details-container {
+    margin-bottom: 20px;
   }
-`;
+  .poster-details-container {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  `;

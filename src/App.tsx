@@ -19,8 +19,8 @@ function App() {
             </p>
             <div className="components-container">
               <SearchBox />
-              <CustomButton text="Search"/>
-              <CustomButton text="Reset"/>
+              <CustomButton type="primary" text="Search"/>
+              <CustomButton type="primary" text="Reset"/>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ function App() {
                 <h5 className="subtitle-details-container">Review</h5>
                 <RatingStars />
               </div>
-              <CustomButton text="Favorite"/>
+              <CustomButton type="fav-button" text="Favorite"/>
             </div>
 
             <div className="poster-details-container">
