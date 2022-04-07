@@ -26,7 +26,7 @@ export const Container = styled.div`
   .title-search-container,
   .title-details-container {
     margin-bottom: 10px;
-    color: #F5C50C;
+    color: #f5c50c;
   }
   .title-search-container {
     font-size: 28px;
@@ -79,4 +79,4 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
   }
-  `;
+`;
