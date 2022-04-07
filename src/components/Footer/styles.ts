@@ -11,4 +11,12 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 10px;
+  
+  p { 
+    margin: 5px;
+  }
+
+  .icon-heart {
+    color: red;
+  }
 `;

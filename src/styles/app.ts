@@ -9,7 +9,8 @@ export const Container = styled.div`
 
   .content {
     margin-top: 12vh;
-    width: 90%;
+    width: 80%;
+    max-width: 1300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +27,9 @@ export const Container = styled.div`
   .title-details-container {
     margin-bottom: 10px;
     color: #F5C50C;
+  }
+  .title-search-container {
+    font-size: 28px;
   }
   .text-search-container {
     text-align: center;
@@ -47,8 +51,7 @@ export const Container = styled.div`
   }
   .components-details-container {
     width: 70%;
-    height: 380px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -71,9 +74,9 @@ export const Container = styled.div`
     margin-bottom: 20px;
   }
   .poster-details-container {
-    width: 20%;
+    padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
   }
   `;

@@ -26,16 +26,13 @@ function App() {
 
           <div className="details-container">
             <div className="components-details-container">
-              <h2 className="title-details-container">Titulo do filme</h2>
+              <h2 className="title-details-container">Aguardando informações...</h2>
               <p className="text-details-container">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-                remaining essentially unchanged.
+                Aguardando informações...
               </p>
               <div className="actor-details-container">
                 <h5 className="subtitle-details-container">Actor</h5>
-                <p>Lorem ipsum</p>
+                <p>N/A</p>
               </div>
               <div className="review-details-container">
                 <h5 className="subtitle-details-container">Review</h5>

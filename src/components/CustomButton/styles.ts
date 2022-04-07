@@ -39,6 +39,6 @@ export const Container = styled.div`
         margin-right: 5px;
     }
     .icon-fav-button {
-        font-size: 15px
+        font-size: 15px;
     }
 `;

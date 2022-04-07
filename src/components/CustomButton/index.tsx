@@ -14,13 +14,14 @@ function CustomButton(props: IProps) {
     
     return(
         <Container>
-            {type === 'primary' ? 
-                <input className={type} type="button" value={text} />
+            {
+                type === 'primary' ? 
+                    <input className={type} type="button" value={text} />
                 : 
-                <div className={type}>
-                    <p className="text-fav-button">{text}</p>
-                    <FiHeart className="icon-fav-button"/>
-                </div>
+                    <div className={type}>
+                        <p className="text-fav-button">{text}</p>
+                        <FiHeart className="icon-fav-button"/>
+                    </div>
             }
         </Container>
     )
