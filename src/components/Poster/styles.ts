@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 270px;
-    height: 380px;
     img { 
-        width: 100%;
+        width: 200px;
+        border-radius: 5px;
     }
 `;

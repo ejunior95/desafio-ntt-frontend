@@ -1,9 +1,10 @@
+import { Container } from './styles/app';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SearchBox from './components/SearchBox';
 import CustomButton from './components/CustomButton';
 import Poster from './components/Poster';
-import { Container } from './styles/app';
+import RatingStars from './components/RatingStars';
 
 function App() {
   return ( 
@@ -36,11 +37,18 @@ function App() {
                 <h5 className="subtitle-details-container">Actor</h5>
                 <p>Lorem ipsum</p>
               </div>
+              <div className="review-details-container">
+                <h5 className="subtitle-details-container">Review</h5>
+                <RatingStars />
+              </div>
+              <CustomButton text="Favorite"/>
             </div>
+
             <div className="poster-details-container">
               <Poster />
             </div>
           </div>
+
         </section>
       <Footer />
     </Container>

@@ -8,9 +8,8 @@ export const Container = styled.div`
   color: #ffffff;
 
   .content {
-    margin-top: 10vh;
+    margin-top: 12vh;
     width: 90%;
-    padding: 20px;
     max-width: 1100px;
   }
   .search-container {
@@ -41,7 +40,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
     width: 100%;
   }
   .components-details-container {
@@ -54,16 +52,17 @@ export const Container = styled.div`
   }
   .subtitle-details-container {
     font-size: 17px;
+    margin-right: 15px;
   }
   .text-details-container {
     width: 90%;
     margin-bottom: 20px;
   }
-  .actor-details-container {
+  .actor-details-container,
+  .review-details-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 160px;
   }
   .poster-details-container {
     width: 30%;
