@@ -10,6 +10,10 @@ import RatingStars from './components/RatingStars';
 import Loading from './components/Loading';
 import config from './config/secrets/apiKey.json';
 
+interface IRatings {
+  Source: string;
+  Value: string;
+}
 interface IMovie {
   Title: string;
   Year: string;
@@ -33,11 +37,6 @@ interface IMovie {
   Type: string;
   totalSeasons: string;
   Response: string;
-}
-
-interface IRatings {
-  Source: string;
-  Value: string;
 }
 
 const App = () => {

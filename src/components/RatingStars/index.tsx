@@ -1,4 +1,4 @@
-import { FaRegStar, FaStarHalfAlt, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { Container } from './styles';
 
@@ -6,31 +6,24 @@ interface IProps {
   rating: string;
 }
 
-function getRating(ratingStars: string) {
-  try {
-    const ratingNumber = parseFloat(ratingStars);
-    console.log(ratingNumber);
-    if (isNaN(ratingNumber)) {
-      console.error('Failed to convert string in float');
-    } else {
-      const ratingNumberInt = Math.floor(ratingNumber);
-      for (let i = 0; i < ratingNumberInt; i++) {
-        <>
-          <FaStar className="icon-star full" />
-        </>;
-      }
-    }
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-function RatingStars(props: IProps) {
+const RatingStars = (props: IProps) => {
   const { rating } = props;
+
+  const [starCounting, setStarCounting] = useState(10);
+
+  function getRating(rating: string) {
+    if (!rating || rating === '') {
+      setStarCounting(10);
+    } else {
+      const splitRatingStr = rating.split('.');
+      const ratingNumberInt = parseInt(splitRatingStr[0]);
+      setStarCounting(ratingNumberInt);
+    }
+  }
 
   useEffect(() => {
     getRating(rating);
-  }, []);
+  }, [rating]);
 
   return (
     <Container>
@@ -39,13 +32,8 @@ function RatingStars(props: IProps) {
       <FaStar className="icon-star empty" />
       <FaStar className="icon-star empty" />
       <FaStar className="icon-star empty" />
-      <FaStar className="icon-star empty" />
-      <FaStar className="icon-star empty" />
-      <FaStar className="icon-star empty" />
-      <FaStar className="icon-star empty" />
-      <FaStar className="icon-star empty" />
     </Container>
   );
-}
+};
 
 export default RatingStars;

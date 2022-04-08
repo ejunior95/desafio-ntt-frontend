@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc main.ts dist/",
+    "build": "tsc ./src/* vite build",
     "preview": "vite preview",
     "lint:fix": "eslint --fix src/** --max-warnings=0"
   },
