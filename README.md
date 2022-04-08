@@ -3,7 +3,7 @@
 <a href="https://github.com/ejunior95/desafio-ntt-frontend/stargazers"><img alt="Stargazers" src="https://img.shields.io/github/stars/ejunior95/desafio-ntt-frontend?style=social"></a>
 </p>
 
-![Banner_Cred_Rock](https://user-images.githubusercontent.com/59847806/114299621-b5be9180-9a92-11eb-915d-74a2c7cc494d.png)
+![Banner_CineAPP](https://user-images.githubusercontent.com/59847806/162542576-c4cdabbd-79d0-42ee-851f-e9a42232d5d1.png)
 <h1 align="center">CineAPP - Sistema de consulta de informações IMDB</h1>
 
 <p>
@@ -31,25 +31,6 @@ A aplicação foi publicada via o serviço da Vercel e pode ser visualizado <a h
 ## 🎨 Layout
 
 Todo o layout, UI e UX da aplicação foi criado e desenvolvido por mim! :)
-
-### Mobile
-
-<p style="display: flex; align-items: center; justify-content: space-evenly; width: 100%">
-  
- ![image](https://user-images.githubusercontent.com/59847806/115613146-70843600-a2c2-11eb-93a2-fdaa723ea792.png)![image](https://user-images.githubusercontent.com/59847806/115613235-885bba00-a2c2-11eb-88aa-58216363f2b7.png) 
-
-</p>
-
-### Web
-
-<p style="display: flex; align-items: flex-start; justify-content: center;">
-
-![image](https://user-images.githubusercontent.com/59847806/115612720-f3f15780-a2c1-11eb-9453-eae8b9cd0b1b.png)
-
-![image](https://user-images.githubusercontent.com/59847806/115612958-374bc600-a2c2-11eb-9a83-b477b0065f31.png)
-
-</p>
-
 
 ### Pré-requisitos
 
