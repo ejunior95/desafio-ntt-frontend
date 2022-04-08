@@ -22,6 +22,48 @@ export const Container = styled.div`
       color: #1a1a1a;
     }
   }
+  @media (min-width: 921px) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 100%;
+
+    input {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      width: 90%;
+      font-size: 15px;
+    }
+    .logo-search {
+      color: #1a1a1a;
+    }
+  }
+  @media (min-width: 421px) and (max-width: 920px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 100%;
+
+    input {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      width: 90%;
+      font-size: 20px;
+    }
+    .logo-search {
+      color: #1a1a1a;
+    }
+  }
   @media (max-width: 420px) {
     display: flex;
     align-items: center;
