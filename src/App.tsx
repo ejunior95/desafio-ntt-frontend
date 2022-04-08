@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Container } from './styles/app';
+import { api } from './server/api';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SearchBox from './components/SearchBox';
 import CustomButton from './components/CustomButton';
 import Poster from './components/Poster';
 import RatingStars from './components/RatingStars';
+import Loading from './components/Loading';
 import config from './config/secrets/apiKey.json';
-import { api } from './server/api';
 
 interface IMovie {
   Title: string;
@@ -43,6 +44,7 @@ const App = () => {
   const [movie, setMovie] = useState({} as IMovie);
   const [rating, setRating] = useState('');
   const [search, setSearch] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setMovie({
@@ -106,6 +108,7 @@ const App = () => {
   }
 
   function getResults(movieName: string) {
+    setIsLoading(true);
     api
       .get<IMovie>('/', {
         params: {
@@ -140,11 +143,18 @@ const App = () => {
           Response: res.data.Response,
         });
         setRating(res.data.imdbRating);
+        setIsLoading(false);
       });
   }
 
   return (
     <Container>
+      {isLoading && (
+        <>
+          <Loading />
+        </>
+      )}
+
       <Header />
       <section className="content">
         <div className="search-container">

@@ -6,9 +6,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-evenly;
   color: #ffffff;
+  height: 100vh;
 
   .content {
-    margin-top: 12vh;
     width: 80%;
     max-width: 1300px;
     display: flex;
