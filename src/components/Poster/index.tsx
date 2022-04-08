@@ -1,10 +1,16 @@
 import { Container } from './styles';
 import PosterDefault from '../../assets/default_poster.jpg';
 
-function Poster() {
+interface IProps {
+  sourceImg?: string;
+}
+
+function Poster(props: IProps) {
+  const { sourceImg } = props;
+
   return (
     <Container>
-      <img src={PosterDefault} alt="Movie Poster" />
+      {sourceImg === '' ? <img src={PosterDefault} alt="Movie Poster" /> : <img src={sourceImg} alt="Movie Poster" />}
     </Container>
   );
 }
