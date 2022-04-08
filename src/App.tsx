@@ -126,7 +126,7 @@ const App = () => {
           Genre: res.data.Genre,
           Director: res.data.Director,
           Writer: res.data.Writer,
-          Actors: res.data.Actors,
+          Actors: res.data.Actors && res.data.Actors !== 'N/A' ? res.data.Actors : 'Sem resultados',
           Plot: res.data.Plot ? res.data.Plot : 'Sem resultados',
           Language: res.data.Language,
           Country: res.data.Country,

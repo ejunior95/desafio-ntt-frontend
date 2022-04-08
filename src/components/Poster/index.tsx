@@ -10,7 +10,11 @@ function Poster(props: IProps) {
 
   return (
     <Container>
-      {sourceImg === '' ? <img src={PosterDefault} alt="Movie Poster" /> : <img src={sourceImg} alt="Movie Poster" />}
+      {sourceImg === '' || sourceImg === 'N/A' ? (
+        <img src={PosterDefault} alt="Movie Poster" />
+      ) : (
+        <img src={sourceImg} alt="Movie Poster" />
+      )}
     </Container>
   );
 }
