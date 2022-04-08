@@ -6,6 +6,7 @@ import SearchBox from './components/SearchBox';
 import CustomButton from './components/CustomButton';
 import Poster from './components/Poster';
 import RatingStars from './components/RatingStars';
+import config from './config/secrets/apiKey.json';
 import { api } from './server/api';
 
 interface IMovie {
@@ -108,14 +109,14 @@ const App = () => {
     api
       .get<IMovie>('/', {
         params: {
-          apiKey: '4f3367e7',
+          apiKey: `${config.value}`,
           t: `${movieName}`,
           plot: 'short',
         },
       })
       .then(res => {
         setMovie({
-          Title: res.data.Title,
+          Title: res.data.Title ? res.data.Title : 'Não encontramos nada :(',
           Year: res.data.Year,
           Rated: res.data.Rated,
           Released: res.data.Released,
@@ -124,14 +125,14 @@ const App = () => {
           Director: res.data.Director,
           Writer: res.data.Writer,
           Actors: res.data.Actors,
-          Plot: res.data.Plot,
+          Plot: res.data.Plot ? res.data.Plot : 'Sem resultados',
           Language: res.data.Language,
           Country: res.data.Country,
           Awards: res.data.Awards,
-          Poster: res.data.Poster,
+          Poster: res.data.Poster ? res.data.Poster : '',
           Ratings: res.data.Ratings,
           Metascore: res.data.Metascore,
-          imdbRating: res.data.imdbRating,
+          imdbRating: res.data.imdbRating ? res.data.imdbRating : '',
           imdbVotes: res.data.imdbVotes,
           imdbID: res.data.imdbID,
           Type: res.data.Type,
