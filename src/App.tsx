@@ -38,16 +38,78 @@ interface IRatings {
   Value: string;
 }
 
-function App() {
+const App = () => {
   const [movie, setMovie] = useState({} as IMovie);
   const [rating, setRating] = useState('');
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
+    setMovie({
+      Title: 'Aguardando informações...',
+      Year: '',
+      Rated: '',
+      Released: '',
+      Runtime: '',
+      Genre: '',
+      Director: '',
+      Writer: '',
+      Actors: 'Aguardando informações...',
+      Plot: 'Aguardando informações...',
+      Language: '',
+      Country: '',
+      Awards: '',
+      Poster: '',
+      Ratings: {
+        Source: '',
+        Value: '',
+      },
+      Metascore: '',
+      imdbRating: '',
+      imdbVotes: '',
+      imdbID: '',
+      Type: '',
+      totalSeasons: '',
+      Response: '',
+    });
+  }, []);
+
+  function resetAll() {
+    setMovie({
+      Title: 'Aguardando informações...',
+      Year: '',
+      Rated: '',
+      Released: '',
+      Runtime: '',
+      Genre: '',
+      Director: '',
+      Writer: '',
+      Actors: 'Aguardando informações...',
+      Plot: 'Aguardando informações...',
+      Language: '',
+      Country: '',
+      Awards: '',
+      Poster: '',
+      Ratings: {
+        Source: '',
+        Value: '',
+      },
+      Metascore: '',
+      imdbRating: '',
+      imdbVotes: '',
+      imdbID: '',
+      Type: '',
+      totalSeasons: '',
+      Response: '',
+    });
+    setSearch('');
+  }
+
+  function getResults(movieName: string) {
     api
       .get<IMovie>('/', {
         params: {
           apiKey: '4f3367e7',
-          t: 's',
+          t: `${movieName}`,
           plot: 'short',
         },
       })
@@ -78,7 +140,7 @@ function App() {
         });
         setRating(res.data.imdbRating);
       });
-  }, []);
+  }
 
   return (
     <Container>
@@ -91,9 +153,9 @@ function App() {
             bancos de dados.
           </p>
           <div className="components-container">
-            <SearchBox />
-            <CustomButton type="primary" text="Search" />
-            <CustomButton type="primary" text="Reset" />
+            <SearchBox value={search} onChange={setSearch} />
+            <CustomButton type="primary" text="Search" onClick={() => getResults(search)} />
+            <CustomButton type="primary" text="Reset" onClick={resetAll} />
           </div>
         </div>
 
@@ -120,6 +182,6 @@ function App() {
       <Footer />
     </Container>
   );
-}
+};
 
 export default App;
