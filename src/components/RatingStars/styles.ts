@@ -8,4 +8,10 @@ export const Container = styled.div`
   .icon-star {
     margin: 0px 5px 0px 5px;
   }
+  .icon-star.full {
+    color: yellow;
+  }
+  .icon-star.empty {
+    color: white;
+  }
 `;

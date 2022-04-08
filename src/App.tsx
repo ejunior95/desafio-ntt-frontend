@@ -40,6 +40,7 @@ interface IRatings {
 
 function App() {
   const [movie, setMovie] = useState({} as IMovie);
+  const [rating, setRating] = useState('');
 
   useEffect(() => {
     api
@@ -75,6 +76,7 @@ function App() {
           totalSeasons: res.data.totalSeasons,
           Response: res.data.Response,
         });
+        setRating(res.data.imdbRating);
       });
   }, []);
 
@@ -103,9 +105,9 @@ function App() {
               <h5 className="subtitle-details-container">Actors</h5>
               <p>{movie.Actors}</p>
             </div>
-            <div className="review-details-container">
+            <div className="review-details-container" title={movie.imdbRating}>
               <h5 className="subtitle-details-container">Review</h5>
-              <RatingStars />
+              <RatingStars rating={rating} />
             </div>
             <CustomButton type="fav-button" text="Favorite" />
           </div>
