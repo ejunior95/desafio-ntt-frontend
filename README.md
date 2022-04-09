@@ -18,7 +18,7 @@
 
 No dia 04/03/2022, me foi passado pelo time de recrutamento da NTT Data um desafio para desenvolver uma aplicação, foi muito dificil mas consegui realizar o que foi solicitado, e o resultado se encontra nesse repositório!
 
-A aplicação foi publicada via o serviço da Vercel e pode ser visualizado <a href="https://desafio-ntt-frontend-jm7fe5335-lambdatec100.vercel.app/home">neste link</a>.
+A aplicação foi publicada via o serviço da Vercel e pode ser visualizado <a href="https://desafio-ntt-frontend-2noeqqbwz-lambdatec100.vercel.app/">neste link</a>.
 
 ---
 
